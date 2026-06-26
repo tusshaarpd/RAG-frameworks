@@ -1,0 +1,35 @@
+# Framework Arena - CPU only, one API key (OPENAI_API_KEY)
+streamlit>=1.40,<2
+openai>=1.50,<3
+
+# Arena 1: LangChain (0.3 line - langchain-community is not yet on 1.x)
+langchain>=0.3.25,<0.4
+langchain-core>=0.3.59,<0.4
+langchain-openai>=0.3,<0.4
+langchain-community>=0.3,<0.4
+langchain-huggingface>=0.1,<0.2
+
+# Arena 2: LlamaIndex
+llama-index-core>=0.12,<0.16
+llama-index-llms-openai>=0.3,<0.7
+llama-index-embeddings-huggingface>=0.4,<0.7
+llama-index-readers-file>=0.4,<0.7
+
+# Arena 3: LangGraph
+langgraph>=0.2,<0.5
+
+# Arena 4: CrewAI
+crewai>=0.80,<2
+
+# Shared infrastructure
+faiss-cpu>=1.8,<2
+sentence-transformers>=3,<6
+numpy<2          # torch<2.3 wheels are compiled against NumPy 1.x
+pypdf>=4,<7
+graphviz>=0.20,<1
+
+# Sample PDF generation (sample_data/generate_sample.py)
+fpdf2>=2.7,<3
+
+# Load OPENAI_API_KEY from a local .env file (app.py)
+python-dotenv>=1,<2
